@@ -41,3 +41,15 @@ describe('Step 3', () => {
 		expect(add("1\n2,3\n4\n5")).toBe(15);
 	})
 });
+
+describe('Step 4', () => {
+	test('should return 6 if input is //;\n1;2;3', () => {
+		expect(add("//;\n1\n2,3")).toBe(6);
+	}),
+	test('should return 10 if input is //<\n1<2<3<4', () => {
+		expect(add("//<\n1<2,3\n4")).toBe(10);
+	}),
+	test('should return 15 if input is //|\n1|2|3|4|5', () => {
+		expect(add("//|\n1|2,3|4\n5")).toBe(15);
+	})
+});
