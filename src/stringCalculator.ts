@@ -14,6 +14,11 @@ function add(numbers: string): number {
 
 	let sum = 0;
 
+	let negatives = numList.filter(n => parseInt(n) < 0);
+	if(negatives.length > 0){
+		throw new Error(`Negatives not allowed: ${negatives.join(',')}`);
+	}
+
 	for(let n of numList){
 		sum += parseInt(n);
 	}
