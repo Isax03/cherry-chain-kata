@@ -1,14 +1,15 @@
-function add(s: string){
-	if (s == "")
+function add(numbers: string): number {
+	if (numbers == "")
 		return 0;
 
-	let numbers = s.split(",");
-	if(numbers.length == 1){
-		return parseInt(numbers[0]);
+	let numList = numbers.split(",");
+	let sum = 0;
+
+	for(let n of numList){
+		sum += parseInt(n);
 	}
-	else{
-		return parseInt(numbers[0]) + parseInt(numbers[1]);
-	}
+
+	return sum;
 }
 
 export { add };
