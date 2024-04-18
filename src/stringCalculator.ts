@@ -19,6 +19,8 @@ function add(numbers: string): number {
 		throw new Error(`Negatives not allowed: ${negatives.join(',')}`);
 	}
 
+	numList = numList.filter(n => parseInt(n) <= 1000);
+
 	for(let n of numList){
 		sum += parseInt(n);
 	}
