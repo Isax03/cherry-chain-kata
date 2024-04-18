@@ -65,3 +65,15 @@ describe('Step 5', () => {
 		expect(() => add("1,-2,3,-4")).toThrow("Negatives not allowed: -2,-4");
 	})
 });
+
+describe('Step 6', () => {
+	test('should return 2 if input is 2,1001', () => {
+		expect(add("2,1001")).toBe(2);
+	}),
+	test('should return 1000 if input is 1000,1001', () => {
+		expect(add("1000,1001")).toBe(1000);
+	}),
+	test('should return 1001 if input is 1000,1', () => {
+		expect(add("1000,3")).toBe(1003);
+	})
+});
