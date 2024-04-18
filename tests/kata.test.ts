@@ -29,3 +29,15 @@ describe('Step 2', () => {
 		expect(add("1,6,9,2,4,-1")).toBe(21);
 	})
 });
+
+describe('Step 3', () => {
+	test('should return 6 if input is 1\n2,3', () => {
+		expect(add("1\n2,3")).toBe(6);
+	}),
+	test('should return 10 if input is 1\n2,3\n4', () => {
+		expect(add("1\n2,3\n4")).toBe(10);
+	}),
+	test('should return 15 if input is 1,2,3\n4\n5', () => {
+		expect(add("1\n2,3\n4\n5")).toBe(15);
+	})
+});
