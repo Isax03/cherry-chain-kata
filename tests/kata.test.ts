@@ -14,3 +14,18 @@ describe('Step 1', () => {
 		expect(add("2,2")).toBe(4);
 	})
 });
+
+describe('Step 2', () => {
+	test('should return 5 if input is 1,2,2', () => {
+		expect(add("1,2,2")).toBe(5);
+	}),
+	test('should return 10 if input is 1,2,2,5', () => {
+		expect(add("1,2,2,5")).toBe(10);
+	}),
+	test('should return 15 if input is 1,2,2,5,5', () => {
+		expect(add("1,2,2,5,5")).toBe(15);
+	}),
+	test('should return 20 if input is 1,6,9,2,4,-1', () => {
+		expect(add("1,6,9,2,4,-1")).toBe(21);
+	})
+});
