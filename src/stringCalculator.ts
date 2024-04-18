@@ -2,7 +2,7 @@ function add(numbers: string): number {
 	if (numbers == "")
 		return 0;
 
-	let numList = numbers.split(",");
+	let numList = numbers.split(/,|\n/);
 	let sum = 0;
 
 	for(let n of numList){
