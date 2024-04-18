@@ -25,8 +25,8 @@ describe('Step 2', () => {
 	test('should return 15 if input is 1,2,2,5,5', () => {
 		expect(add("1,2,2,5,5")).toBe(15);
 	}),
-	test('should return 20 if input is 1,6,9,2,4,-1', () => {
-		expect(add("1,6,9,2,4,-1")).toBe(21);
+	test('should return 20 if input is 6,9,2,4', () => {
+		expect(add("6,9,2,4")).toBe(21);
 	})
 });
 
@@ -51,5 +51,17 @@ describe('Step 4', () => {
 	}),
 	test('should return 15 if input is //|\n1|2|3|4|5', () => {
 		expect(add("//|\n1|2,3|4\n5")).toBe(15);
+	})
+});
+
+describe('Step 5', () => {
+	test('should throw an error if input is 1,-2,3', () => {
+		expect(() => add("1,-2,3")).toThrow("Negatives not allowed: -2");
+	}),
+	test('should throw an error if input is 1,-2,-3', () => {
+		expect(() => add("1,-2,-3")).toThrow("Negatives not allowed: -2,-3");
+	}),
+	test('should throw an error if input is 1,-2,3,-4', () => {
+		expect(() => add("1,-2,3,-4")).toThrow("Negatives not allowed: -2,-4");
 	})
 });
